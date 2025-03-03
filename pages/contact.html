@@ -1,0 +1,210 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="cat" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" source="trust_login" name="captcha">
+    <member name="code" type="scalar" request="captcha" />
+</basis>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>[##cms.seo.title|db.list.title##]</title>
+    <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="BasisCore" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="enamad" content="525823" />
+    <link rel="apple-touch-icon" sizes="57x57" href="" />
+    <link rel="shortcut icon" sizes="57x57" href="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <!----------------CSS FILE---------------->
+    <!----CSS MAIN STYLE---->
+    <link href="[##cms.cms.cdn##]/css/style-hotelmotel.css" type="text/css" rel="stylesheet" />
+    <!----CSS FONT AWESOME---->
+    <link href="[##cms.cms.cdn##]/css/font_awesome.css" type="text/css" rel="stylesheet" />
+    <!----------------JS FILE---------------->
+    <script src="[##cms.cms.cdn##]/js/library.js" type="text/javascript"></script>
+
+<body class="background-color_body">
+    <main>
+        <basis core="call" file="header.inc" />
+        <section class="content">
+            <section class="loginRegister"></section>
+            <section class="item-container dir-rtl">
+                <div class="bc-main">
+                    <div class="title-content text-center">
+                        <h1 class="sec-title text-center color_gray">تماس با ما</h1>
+                        <p class="font_13 color_gray">تورهای ویژه و خاص را فقط از هزاره سوم زرین کیش خریداری کنید تا
+                            سفری امن و متفاوتی را تجربه کنید</p>
+                        <hr class="color_1 background-color_1">
+                    </div>
+                    <div class="contact-content p-relative content-section">
+                        <h1 itemprop="@vocabulary" class="title">تماس با
+                            <basis core="view" datamembername="db.info">
+                                <face filter="TypeID=150">
+                                    @answer
+                                </face>
+                            </basis>
+                        </h1>
+                        <basis core="view" datamembername="db.info">
+                            <layout>
+                                <div class="contact-item font_16"><span><i
+                                            class="fa fa-map-marker-alt background-color_1 color_white"></i>
+                                        <span></span>
+                                        نشانی : </span></span>
+                                    <span class="ans_contact color_gray">@child <span class="seprate">-</span></span>
+                                    
+                                </div>
+                            </layout>
+                            <face filter="prpid=7999">@answer</face>
+                        </basis>
+                        <div class="contact-item font_16"><span><i
+                            class="fa fa-map-marker-alt background-color_1 color_white"></i>
+                         <span></span>
+                        نشانی تهران : </span></span>
+                         <span class="ans_contact color_gray"></span>
+                        </div>
+                        <basis core="view" datamembername="db.info">
+                            <layout>
+                                <div class="contact-item font_16"><span><i
+                                            class="fa fa-phone background-color_1 color_white"></i>
+                                        <span> تلفن : </span></span> @child </div>
+                            </layout>
+                            <face filter="prpid=8000" level="1">@child</face>
+                            <face filter="prpid=8000" level="2"><span class="ans_contact"><a class="color_gray"
+                                        href="tel:@text">@text</a><span class="seprate">-</span></span></face>
+                        </basis>
+                        <div class="contact-item font_16"><span><i
+                            class="fa fa-phone background-color_1 color_white"></i>
+                        <span> تلفن تهران : </span></span> <span class="ans_contact"><a class="color_gray"
+                            href="tel:"></a></span> </div>
+                        <basis core="view" datamembername="db.info">
+                            <layout>
+                                <div class="contact-item font_16"><span> <i
+                                            class="fa fa-mail-bulk background-color_1 color_white"></i> <span> ایمیل :
+                                        </span></span> @child </div>
+                            </layout>
+                            <face filter="prpid=8001" level="1">@child</face>
+                            <face filter="prpid=8001" level="2"><span class="ans_contact"><a class="color_gray"
+                                        href="mailto:@text">@text</a><span class="seprate">-</span></span></face>
+                        </basis>
+                        <basis core="view" datamembername="db.info">
+                            <layout>
+                                <div class="contact-item font_16"><span> <i
+                                            class="fa fas fa-fax background-color_1 color_white"></i> <span> فکس :
+                                        </span></span>@child </div>
+                            </layout>
+                            <face filter="prpid=8393" level="1">@child</face>
+                            <face filter="prpid=8393" level="2"><span class="ans_contact color_gray">@text<span
+                                class="seprate">-</span></span></face>
+                        </basis>
+                        <p class="font_14 text-left">ما را در شبکه های اجتماعی دنبال کنید : </p>
+                        <ul class="social-icons text-left">
+                            <li><a class="text-center" href=""><i class="far fa-facebook-f"></i></a></li>
+                            <li><a class="text-center" href=""><i class="far fa-twitter"></i></a></li>
+                            <li><a class="text-center" href=""><i class="fa fa-paper-plane"></i></a></li>
+                            <li><a class="text-center" href=""><i class="far fa-whatsapp"></i></a></li>
+                            <li><a class="text-center" href=""><i class="far fa-instagram"></i></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="map-content">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.44847048391!2d54.01683901488964!3d26.537856983290343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e50abc9e304c8ed:0x1230b12f96baac1d!2sAramis Hotel!5e0!3m2!1sen!2s!4v1649846364056!5m2!1sen!2s"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="subscribe-content  p-relative content-section float-left">
+                        <form method="post" action="" class="contact-form">
+                            <div class="width_50 float-right">
+                                <div class="inner width_95">
+                                    <label class="font_14 text-right">نام</label>
+                                    <input type="text" class="transition width_100 font_13 border-radius" placeholder=""
+                                        name="firstname" required="">
+                                </div>
+
+                            </div>
+                            <div class="width_50 float-right">
+                                <div class="inner width_95">
+                                    <label class="font_14 text-right">نام خانوادگی</label>
+                                    <input type="text" class="transition width_100 font_13 border-radius" placeholder=""
+                                        name="lastname" required="">
+                                </div>
+
+                            </div>
+                            <div class="width_50 float-right">
+                                <div class="inner width_95">
+                                    <label class="font_14 text-right">نام شرکت/آژانس</label>
+                                    <input type="text" class="transition width_100 font_13 border-radius" placeholder=""
+                                        name="companyname" required="">
+                                </div>
+
+                            </div>
+                            <div class="width_50 float-right">
+                                <div class="inner width_95">
+                                    <label class="font_14 text-right">تلفن</label>
+                                    <input type="text" class="transition width_100 font_13 border-radius" placeholder=""
+                                        name="tel" required="">
+                                </div>
+
+                            </div>
+                            <div class="width_100">
+                                <div class="inner width_95">
+                                    <label class="font_14 text-right">کد امنیتی</label>
+                                    <div class="clr"></div>
+                                    <input type="text" class="transition width_75 float-right font_13 border-radius"
+                                        placeholder="" name="captcha" required="">
+                                    <span class="load-captcha width_15 float-left">
+                                        <img class="captcha" alt="captcha" src="[##captcha.code.captcha##]" width="80"
+                                            height="40">
+                                        <input type="hidden" value="[##captcha.code.captcha##]" name="Captchaid">
+                                    </span>
+                                    <span onclick="refresh_captcha(this)"
+                                        class="width_5 float-left background-color_2 color_white text-center border-radius cursor-pointer exchange">
+                                        <i class="fa fa-sync"></i></span>
+
+                                    <div class="clr"></div>
+                                </div>
+
+                            </div>
+                            <div class="width_100">
+                                <div class="inner width_95">
+                                    <label class="font_14 text-right">پیغام یا سوال شما</label>
+                                    <textarea name="message" class="transition width_100 font_13 border-radius"
+                                        cols="30" rows="4" placeholder="" required=""></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit"
+                                    class="btn_1 background-color_1 hvr-horizontal transition color_white font_16 width_95">
+                                    ثبت
+
+                                </button>
+                            </div>
+                            <div class="contact-loading unvisible text-center">
+                                <div id="ballsWaveG">
+                                    <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                                </div>
+                            </div>
+                            <p class="contact-result text-center font_16"></p>
+                            <div class="clr"></div>
+                        </form>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </section>
+        </section>
+        <basis core="call" file="footer.inc" />
+    </main>
+</body>
+
+</html>

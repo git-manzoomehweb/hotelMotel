@@ -1,0 +1,92 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="51899">
+    <member name="news-list" type="list" link="article.bc" propertyid="7244" typeid="159" />
+</basis>
+<footer class="footer dir-rtl">
+    <div class="footer-top font_14 item-container">
+        <div class="bc-main">
+            <div class="col-footer-top float-right">
+                <div class="inner-col-footer">
+                    <a href="/"><img src="[##cms.cms.cdn##]/images/logo.png" width="150" height="42" alt="flyhoda"/></a>
+                    <ul class="list-footer info">
+                        <basis core="print" datamembername="db.info">
+                            <face filter="prpid = 7999"><li><i class="fa fa-map-marker-alt text-center"></i><span>@answer</span></li></face>
+                            <face filter="prpid = 8001"> <li><i class="fa fa-envelope text-center"></i><span>@answer</span></li></face>
+                            <face filter="prpid = 8000"><li><i class="fa fa-phone text-center"></i><span>@answer</span></li></face>
+                            <face filter="prpid = 8393"><li><i class="fa fa-fax text-center"></i><span>@answer</span></li></face>
+                        </basis>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-footer-top float-right">
+                <p class="color_white font_16 font_weight title-footer">دسترسی ها</p>
+                <ul class="list-footer margin-list">
+                    <li><a href="/tour-list.bc?catid=51896"><i class="fa fa-angle-double-left"></i><span>تورها</span></a></li>
+                    <li><a href="/visa-list.bc?catid=51894"><i class="fa fa-angle-double-left"></i><span>ویزا</span></a></li>
+                    <li><a href="/article-list.bc?catid=51899"><i class="fa fa-angle-double-left"></i><span>وبلاگ</span></a></li>
+                    <li><a href="/hotel-list.bc?catid=51907"><i class="fa fa-angle-double-left"></i><span>هتل ها</span></a></li>
+                </ul>
+            </div>
+            <div class="col-footer-top float-right">
+                <p class="color_white font_16 font_weight title-footer">اخبار</p>
+                <basis core="list" datamembername="db.article-list">
+                    <layout>
+                        <ul class="list-footer margin-list news-footer">
+                           @child
+                        </ul>
+                    </layout>
+                    <face filter="link is null and rownumber<3">
+                        <li>
+                            <div class="float-right"><img src="/@type_159" width="50" height="50" alt="@title"/></div>
+                            <div class="float-right"><a href="/article.bc?id=@id" ><p class="font_13">@title</p></a>@cdate</p></div>
+                            <div class="clr"></div>
+                        </li>
+                    </face>
+                    <face filter="rownumber<3">
+                        <li>
+                            <div class="float-right"><img src="/@type_159" width="50" height="50" alt="@title"/></div>
+                            <div class="float-right"><a href="/@link" ><p class="font_13">@title</p></a><p class="font_11">@cdate</p></div>
+                            <div class="clr"></div>
+                        </li>
+                    </face>
+                </basis>
+        
+            </div>
+            <div class="col-footer-top float-right">
+                <p class="color_white font_16 font_weight title-footer">درباره ما</p>
+                <basis core="print" datamembername="db.info">
+                    <face filter="prpid = 8004">
+                        <p class="text-justify font_13 mini-about margin-list">@answer</p>
+                    </face>
+                </basis>
+                <ul class="social-icons list-footer margin-list">
+                    <li><a class="text-center" href=""><i class="far fa-facebook-f"></i></a></li>
+                    <li><a class="text-center" href=""><i class="far fa-twitter"></i></a></li>
+                    <li><a class="text-center" href="http://Telegram.me/asrhoda"><i class="fa fa-paper-plane"></i></a></li>
+                    <li><a class="text-center" href=""><i class="far fa-whatsapp"></i></a></li>
+                    <li><a class="text-center" href="https://instagram.com/asrehoda/"><i class="far fa-instagram"></i></a></li>
+                </ul>
+            </div>
+           
+            <div class="clr"></div>
+        </div>
+
+    </div>
+    <div class="footer-bottom font_12 text-center">
+        <div class="bc-main p-relative">
+            <a href="#top" id="back-to-top" class="text-center p-absolute"><i class="fa fa-angle-up font_18"></i></a>
+            <div class="width_50 float-right text-right">
+                <ul class="sign">
+                    <li><img src="" alt="" width="" height=""></li>
+                    <li><img src="" alt="" width="" height=""></li>
+                    <li><img src="" alt="" width="" height=""></li>
+                </ul>
+            </div>
+            <div class="width_50 float-left text-left link">
+                <a href="http://www.basisfly.com/طراحی-سایت-مخصوص-آژانس-مسافرتی" target="_blank">طراحی سایت آژانس مسافرتی</a> و <a href="http://www.basisfly.com/" target="_blank">رزرواسیون آنلاین توسط بیسیس فلای </a> <img src="[##cms.cms.cdn##]/images/basisfly.png" alt="رزرواسیون آنلاین" class="basisfly" width="60" height="15"/>
+            </div>
+            <div class="clr"></div>
+        </div>
+  </div>
+</footer>
+<script src="[##cms.cms.cdn##]/js/menu-responsive.js" type="text/javascript"></script>
+<script src="[##cms.cms.cdn##]/js/core.min.js" type="text/javascript"></script>

@@ -1,0 +1,104 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="tour-list" type="list" link="tour.bc" propertyid="8181,8076,8077,10000504" typeid="159"  />
+</basis>
+<basis core="dbsource" source="basiscore" mid="18" name="db" lid="1" usedforid="[##cms.query.catid##]">
+    <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="cat" id="[##cms.query.catid##]" />
+</basis>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[##cms.seo.title|db.list.title##]</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="BasisCore" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="description" content="[##cms.seo.title|db.list.title##]" />
+    <link rel="apple-touch-icon" sizes="57x57" href="[##cms.cms.cdn##]/images/flyhoda_favicon.png" />
+    <link rel="shortcut icon" sizes="57x57" href="[##cms.cms.cdn##]/images/flyhoda_favicon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <!----------------CSS FILE---------------->
+    <!----CSS MAIN STYLE---->
+    <link href="[##cms.cms.cdn##]/css/style.css" type="text/css" rel="stylesheet" />
+    <!----CSS FONT AWESOME---->
+    <link href="[##cms.cms.cdn##]/css/font_awesome.css" type="text/css" rel="stylesheet" />
+    <!----------------JS FILE---------------->
+    <script src="[##cms.cms.cdn##]/js/library.js" type="text/javascript"></script>
+    </head>
+    <body class="background-color_body">
+    <main>
+        <basis core="call" file="header.inc"/>
+        <section class="loginRegister"></section>
+        <section class="content">
+        <section class="item-container">
+            <div class="bc-main">
+                <div class="title-content text-center">
+                    <p class="font_20">Take a Look at Our</p>
+                    <basis core="print" datamembername="db.scalar">
+                        <face>
+                            <h1 class="sec-title text-center"> @Column1</h1>
+                        </face>
+                    </basis>
+                    <hr class="color_1 background-color_1"/>
+                </div>
+                <basis core="list" datamembername="db.tour-list">
+                    <layout>
+                        <div class="tour-list-container tour-list dir-rtl">
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="link is null">
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="/tour.bc?id=@id" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+                                    <div class="trapezium p-absolute unvisible"><span
+                                            class="font_12 color_white p-absolute width_100 text-center">Special Offer</span></div>
+                                    <img src="@type_159" class="width_100" width="380" height="300" alt="@title" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h2 class="font_17 color_grey">@title</h2>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 time"><i class="far fa-calendar-check color_1"></i><span
+                                            class="slice">@prp_8077</span></span>
+                                    <div class="clr"></div>
+                                </footer>
+                            </a>
+                        </article>
+                    </face>
+                    <face>
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="/@link" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+                                    <div class="trapezium p-absolute unvisible"><span
+                                            class="font_12 color_white p-absolute width_100 text-center">Special Offer</span></div>
+                                    <img src="@type_159" class="width_100" width="380" height="300" alt="@title" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h2 class="font_17 color_grey">@title</h2>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 time"><i class="far fa-calendar-check color_1"></i><span
+                                            class="slice">@prp_8077</span></span>
+                                    <div class="clr"></div>
+                                </footer>
+                            </a>
+                        </article>
+                    </face>
+                </basis>
+           </div>
+        </section>
+        </section>  
+        <basis core="call" file="footer.inc"/>
+    </main>
+</body>
+
+</html>

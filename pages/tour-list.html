@@ -1,0 +1,415 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="tour-list" type="list" link="tour.bc" propertyid="8181,8076,8077,10000504" typeid="159" />
+</basis>
+<basis core="dbsource" source="basiscore" mid="1" name="list" lid="1" schemaid="987" term="[##cms.query.term##]">
+    <member name="airline" type="list" request="spelist" />
+</basis>
+<basis core="dbsource" source="basiscore" mid="18" name="db" lid="1" usedforid="[##cms.query.catid##]">
+    <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="cat" id="[##cms.query.catid##]" />
+</basis>
+<basis core="inlinesource" name="joining">
+    <member name="list" lefttblcol="db.tour-list.prp_10000504" righttblcol="list.airline.name" format="join"
+        jointype="leftjoin" />
+</basis>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>[##cms.seo.title|db.list.title##]</title>
+    <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+    <meta charset="UTF-8" />
+    <meta name="author" content="BasisCore" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="enamad" content="525823" />
+    <link rel="apple-touch-icon" sizes="57x57" href="" />
+    <link rel="shortcut icon" sizes="57x57" href="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <!----------------CSS FILE---------------->
+    <!----CSS MAIN STYLE---->
+    <link href="[##cms.cms.cdn##]/css/style-hotelmotel.css" type="text/css" rel="stylesheet" />
+    <!----CSS FONT AWESOME---->
+    <link href="[##cms.cms.cdn##]/css/font_awesome.css" type="text/css" rel="stylesheet" />
+    <!----------------JS FILE---------------->
+    <script src="[##cms.cms.cdn##]/js/library.js" type="text/javascript"></script>
+
+<body class="background-color_body">
+    <main>
+        <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+            <member name="info" type="view" />
+        </basis>
+        <header class="header background-color_white">
+            <div class="bc-main dir-rtl">
+                <div class="default-header">
+                    <div class="width_80 float-right">
+                        <div class="Login_Information p-relative color_grey font_14"></div>
+                        <nav class="font_14 section-menu">
+                            <ul class="nav-bar">
+                                <li class="menu-item active"><a href="/">صفحه اصلی</a></li>
+                                <li class="menu-item"><a href="">تورها<i class="fa fa-angle-down"></i></a></li>
+                                <li class="menu-item"><a href="">وبلاگ</a></li>
+                                <li class="menu-item"><a href="">درباره ما </a></li>
+                                <li class="menu-item"><a href="">تماس با ما</a></li>
+                            </ul>
+                        </nav>
+                        <div class="clr"></div>
+                    </div>
+                    <div class="width_20 float-left text-left">
+                        <a href="/">
+                            <img src="/images/logo.png" width="150" height="86" alt="hotelmotel" />
+                        </a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="mobile-header p-relative unvisible">
+                    <div class="col1-mobile-header float-right">
+                        <a href="#menu" class="menu_link float-right"><span></span></a>
+                    </div>
+                    <div class="col2-mobile-header float-right p-relative col3-second-part-header"></div>
+                    <div class="col3-mobile-header float-left">
+                        <a href="/" title="hotelmotel" class="float-left text-left">
+                            <img src="/images/logo.png" alt="hotelmotel" width="150" height="86" />
+                        </a>
+
+                    </div>
+                    <nav id="menu" class="unvisible">
+                        <div class="top-menu background-color_1">
+                            <img src="/images/M_logo.png" alt="hotelmotel" width="150" height="86" />
+                            <div class="clr"></div>
+                        </div>
+                        <ul>
+                            <li class="Selected"><a href="/"><i class="fa fa-home"></i>صفحه اصلی</a>
+                            </li>
+                            <li><a href=""><i class="fa fa-link"></i>تور ها</a></li>
+                            <li><a href=""><i class="fa fa-link"></i>وبلاگ</a></li>
+                            <li><a href=""><i class="fa fa-link"></i>درباره ما</a></li>
+                            <li><a href=""><i class="fa fa-link"></i>تماس با ما</a></li>
+                            <li><i class="fa fa-user"></i><span>حساب کاربری</span>
+                                <ul>
+                                    <li class="Login-statusAllowed"><a class="Login-options" data-type="2"><i
+                                                class="fa fa-sign-in-alt"></i>ورود به حساب کاربری</a></li>
+                                    <li><a class="Login-options" data-type="3"><i class="fa fa-user"></i>ثبت نام</a>
+                                    </li>
+                                    <li><a class="Login-options" data-type="4"><i class="fa fa-unlock"></i>بازیابی
+                                            کلمه
+                                            عبور</a></li>
+                                    <li><a class="Login-options" data-type="5"><i class="fa fa-user"></i>ارسال مجدد
+                                            ایمیل</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+
+                        </ul>
+                    </nav>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </header>
+        <section class="loginRegister"></section>
+        <section class="content">
+            <section class="item-container dir-rtl">
+                <div class="bc-main">
+                    <div class="title-content text-center">
+                        <basis core="print" datamembername="db.scalar">
+                            <face>
+                                <h1 class="sec-title text-center color_gray"> @Column1</h1>
+                            </face>
+                        </basis>
+                        <p class="font_13 color_gray">تورهای ویژه و خاص را فقط از هزاره سوم زرین کیش خریداری کنید تا
+                            سفری امن و متفاوتی را تجربه کنید</p>
+                        <hr class="color_1 background-color_1">
+                    </div>
+                    <div class="tour-list-container tour-list">
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+
+                                    <img src="[##cms.cms.cdn##]/images/tour-list-1.jpg" class="width_100" width="380"
+                                        height="240" alt="" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h3 class="font_17 float-right color_grey">تور کوش آداسی </h3>
+
+                                        <div class="clr"></div>
+                                        <p class="ariline-name text-right">
+
+                                            <span class="font_13 color_1">Corendon Airlines</span>
+                                        </p>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 duration width_50 float-right"><i
+                                            class="far fa-clock color_1"></i><span class="slice">6 شب,7
+                                            روز</span></span>
+                                    <span class="font_13 time width_50 float-left"><i
+                                            class="far fa-calendar-check color_1"></i><span>تا اطلاع ثانوی</span></span>
+                                    <div class="clr"></div>
+                                    <div class="d-flex price">
+                                        <span class="color_3 slice">13,345,000
+                                            تومان</span>
+                                        <span class="background-color_3 color_white btn_1">رزرو تور</span>
+                                    </div>
+                                </footer>
+                            </a>
+                        </article>
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+                                    <img src="[##cms.cms.cdn##]/images/tour-list-2.jpg" class="width_100" width="380"
+                                        height="240" alt="" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h3 class="font_17 float-right color_grey">تور کوش آداسی </h3>
+
+                                        <p class="ariline-name text-right">
+
+                                            <span class="font_13 color_1">Corendon Airlines</span>
+                                        </p>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 duration width_50 float-right"><i
+                                            class="far fa-clock color_1"></i><span class="slice">6 شب,7
+                                            روز</span></span>
+                                    <span class="font_13 time width_50 float-left"><i
+                                            class="far fa-calendar-check color_1"></i><span>تا اطلاع ثانوی</span></span>
+                                    <div class="clr"></div>
+                                    <div class="d-flex price">
+                                        <span class="color_3 slice">13,345,000
+                                            تومان</span>
+                                        <span class="background-color_3 color_white btn_1">رزرو تور</span>
+                                    </div>
+                                </footer>
+                            </a>
+                        </article>
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="" class="tour-list-content p-relative  width_100">
+                                <figure class="tour-list-img p-relative">
+                                    <img src="[##cms.cms.cdn##]/images/tour-list-3.jpg" class="width_100" width="380"
+                                        height="240" alt="" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h3 class="font_17 float-right color_grey">تور کوش آداسی </h3>
+
+                                        <p class="ariline-name text-right">
+
+                                            <span class="font_13 color_1">Corendon Airlines</span>
+                                        </p>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 duration width_50 float-right"><i
+                                            class="far fa-clock color_1"></i><span class="slice">6 شب,7
+                                            روز</span></span>
+                                    <span class="font_13 time width_50 float-left"><i
+                                            class="far fa-calendar-check color_1"></i><span>تا اطلاع ثانوی</span></span>
+                                    <div class="clr"></div>
+                                    <div class="d-flex price">
+                                        <span class="color_3 slice">13,345,000
+                                            تومان</span>
+                                        <span class="background-color_3 color_white btn_1">رزرو تور</span>
+                                    </div>
+                                </footer>
+                            </a>
+                        </article>
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+                                    <img src="[##cms.cms.cdn##]/images/tour-list-1.jpg" class="width_100" width="380"
+                                        height="240" alt="" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h3 class="font_17 float-right color_grey">تور کوش آداسی </h3>
+
+                                        <p class="ariline-name text-right">
+
+                                            <span class="font_13 color_1">Corendon Airlines</span>
+                                        </p>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 duration width_50 float-right"><i
+                                            class="far fa-clock color_1"></i><span class="slice">6 شب,7
+                                            روز</span></span>
+                                    <span class="font_13 time width_50 float-left"><i
+                                            class="far fa-calendar-check color_1"></i><span>تا اطلاع ثانوی</span></span>
+                                    <div class="clr"></div>
+                                    <div class="d-flex price">
+                                        <span class="color_3 slice">13,345,000
+                                            تومان</span>
+                                        <span class="background-color_3 color_white btn_1">رزرو تور</span>
+                                    </div>
+                                </footer>
+                            </a>
+                        </article>
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+                                    <img src="[##cms.cms.cdn##]/images/tour-list-2.jpg" class="width_100" width="380"
+                                        height="240" alt="" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h3 class="font_17 float-right color_grey">تور کوش آداسی </h3>
+
+                                        <p class="ariline-name text-right">
+
+                                            <span class="font_13 color_1">Corendon Airlines</span>
+                                        </p>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 duration width_50 float-right"><i
+                                            class="far fa-clock color_1"></i><span class="slice">6 شب,7
+                                            روز</span></span>
+                                    <span class="font_13 time width_50 float-left"><i
+                                            class="far fa-calendar-check color_1"></i><span>تا اطلاع ثانوی</span></span>
+                                    <div class="clr"></div>
+                                    <div class="d-flex price">
+                                        <span class="color_3 slice">13,345,000
+                                            تومان</span>
+                                        <span class="background-color_3 color_white btn_1">رزرو تور</span>
+                                    </div>
+                                </footer>
+                            </a>
+                        </article>
+                        <article class="background-color_white border-radius dir-rtl cursor-pointer p-relative">
+                            <a href="" class="tour-list-content p-relative width_100">
+                                <figure class="tour-list-img p-relative">
+
+                                    <img src="[##cms.cms.cdn##]/images/tour-list-3.jpg" class="width_100" width="380"
+                                        height="240" alt="" />
+                                </figure>
+                                <header>
+                                    <div class="tour-list-text dir-rtl">
+                                        <h3 class="font_17 float-right color_grey">تور کوش آداسی </h3>
+
+                                        <p class="ariline-name text-right">
+
+                                            <span class="font_13 color_1">Corendon Airlines</span>
+                                        </p>
+                                        <div class="clr"></div>
+                                    </div>
+                                </header>
+                                <footer class="text-right color_grey dir-rtl">
+                                    <span class="font_13 duration width_50 float-right"><i
+                                            class="far fa-clock color_1"></i><span class="slice">6 شب,7
+                                            روز</span></span>
+                                    <span class="font_13 time width_50 float-left"><i
+                                            class="far fa-calendar-check color_1"></i><span>تا اطلاع ثانوی</span></span>
+                                    <div class="clr"></div>
+                                    <div class="d-flex price">
+                                        <span class="color_3 slice">13,345,000
+                                            تومان</span>
+                                        <span class="background-color_3 color_white btn_1">رزرو تور</span>
+                                    </div>
+
+
+                                </footer>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </section>
+        </section>
+        <footer class="footer dir-rtl background-color_white">
+            <div class="footer-top font_14 color_gray">
+                <div class="bc-main">
+                    <div class="col-footer-top float-right">
+                        <div class="inner-col-footer">
+                            <a href="/"><img src="/images/logo.png" width="150" height="86" alt="hotelmotel" /></a>
+                            <ul class="social-icons list-footer margin-list">
+                                <li><a class="text-center" href=""><i class="far fa-facebook-f"></i></a></li>
+                                <li><a class="text-center" href=""><i class="far fa-twitter"></i></a></li>
+                                <li><a class="text-center" href=""><i class="fa fa-paper-plane"></i></a></li>
+                                <li><a class="text-center" href=""><i class="far fa-whatsapp"></i></a></li>
+                                <li><a class="text-center" href=""><i class="far fa-instagram"></i></a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="col-footer-top float-right">
+                        <p class="color_1 font_16 font_weight title-footer">دسترسی ها</p>
+                        <ul class="list-footer margin-list">
+                            <li><a href=""><i class="fa fa-angle-double-left"></i><span>تورها</span></a></li>
+                            <li><a href=""><i class="fa fa-angle-double-left"></i><span>وبلاگ</span></a></li>
+                            <li><a href=""><i class="fa fa-angle-double-left"></i><span>درباه ما</span></a></li>
+                            <li><a href=""><i class="fa fa-angle-double-left"></i><span>تماس با ما</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-footer-top float-right">
+                        <p class="color_1 font_16 font_weight title-footer">تماس با ما</p>
+                        <ul class="list-footer info">
+                            <basis core="print" datamembername="db.info">
+                                <face filter="prpid = 7999">
+                                    <li><i class="fa fa-map-marker-alt text-center"></i><span>@answer</span></li>
+                                </face>
+                                <face filter="prpid = 8001">
+                                    <li><i class="fa fa-envelope text-center"></i><span>@answer</span></li>
+                                </face>
+                                <face filter="prpid = 8000">
+                                    <li><i class="fa fa-phone text-center"></i><span>@answer</span></li>
+                                </face>
+                                <face filter="prpid = 8393">
+                                    <li><i class="fa fa-fax text-center"></i><span>@answer</span></li>
+                                </face>
+                            </basis>
+                        </ul>
+
+                    </div>
+                    <div class="col-footer-top float-right">
+                        <p class="color_1 font_16 font_weight title-footer">درباره ما</p>
+                        <basis core="print" datamembername="db.info">
+                            <face filter="prpid = 8004">
+                                <p class="text-justify font_13 mini-about margin-list">@answer</p>
+                            </face>
+                        </basis>
+                    </div>
+
+                    <div class="clr"></div>
+                </div>
+
+            </div>
+            <div class="footer-bottom font_12 text-center">
+                <div class="bc-main p-relative">
+                    <div>
+                        <ul class="sign">
+                            <li><img src="" alt="" width="" height=""></li>
+                            <li><img src="" alt="" width="" height=""></li>
+                            <li><img src="" alt="" width="" height=""></li>
+                        </ul>
+                    </div>
+                    <div class=" link">
+                        <a href="http://www.basisfly.com/طراحی-سایت-مخصوص-آژانس-مسافرتی" target="_blank">طراحی سایت
+                            آژانس مسافرتی</a> و <a href="http://www.basisfly.com/" target="_blank">رزرواسیون آنلاین توسط
+                            بیسیس فلای </a> <img src="/images/basisfly.png" alt="رزرواسیون آنلاین" class="basisfly"
+                            width="60" height="15" />
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </footer>
+        <script src="[##cms.cms.cdn##]/js/menu-responsive.js" type="text/javascript"></script>
+        <script src="[##cms.cms.cdn##]/js/core.min.js" type="text/javascript"></script>
+    </main>
+</body>
+
+</html>
