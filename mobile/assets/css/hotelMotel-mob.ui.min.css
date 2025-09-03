@@ -1603,3 +1603,20 @@ body {
 .suggest-form [data-bc-question]:nth-child(2) {
   margin-bottom: 0 !important;
 }
+
+ul.flighttype-items {
+  flex-direction: column;
+  z-index: 1000;
+  padding: 2rem 0.5rem;
+}
+ul.flighttype-items li {
+  height: fit-content !important;
+}
+ul.flighttype-items {
+  flex-direction: column;
+  z-index: 1000 !important;
+  padding: 2rem 0.5rem;
+}
+ul.flighttype-items li {
+  height: fit-content !important;
+}
