@@ -1,4 +1,5 @@
-<basis core="group" name="other-items" if="'[##cms.query.module-type##]'<>'service'">
+<basis core="group" name="other-items"
+  if="'[##cms.query.module-type##]'<>'service' and '[##cms.query.module-type##]'<>'insurance'">
   <div class="w-full">
     <div class=" ul-list w-full">
       <ul class="w-full pl-0.5 float-right">
@@ -30,13 +31,39 @@
     </div>
   </div>
 </basis>
-<basis core="group" name="other-items" if="'[##cms.query.module-type##]'='service'">
+<basis core="group" name="service" if="'[##cms.query.module-type##]'='service'">
   <div class="block mx-auto ul-list w-full">
     <ul class="w-full pl-0.5 float-right">
       <li class="bg-bgColor-100 rounded-type-1 text-zinc-950 text-center text-base p-1 mb-1"><span>مسیر های داخلی</span>
       </li>
       <li class="cursor-pointer hover:text-primary text-textColor p-1 text-sm" onclick="SelectPlace(this)"
         data-id="1211110"><span>کیش</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1 text-sm" onclick="SelectPlace(this)"
+        data-id="1203548"><span>تهران</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1 text-sm" onclick="SelectPlace(this)"
+        data-id="1211084"><span>اصفهان</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1 text-sm" onclick="SelectPlace(this)"
+        data-id="1211085"><span>تبریز</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1 text-sm" onclick="SelectPlace(this)"
+        data-id="1211124"><span>قزوین</span></li>
+    </ul>
+  </div>
+</basis>
+
+<basis core="group" name="insurance-items" if="'[##cms.query.module-type##]'='insurance'">
+  <div class="block mx-auto ul-list w-full">
+    <ul class="w-full pr-0.5 float-right">
+      <li class="cursor-pointer hover:text-primary text-textColor p-1  text-sm" onclick="SelectPlace(this)"
+        data-id="1002248"><span>امارات متحده عربی</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1  text-sm" onclick="SelectPlace(this)"
+        data-id="1002247"><span>ترکیه</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1  text-sm" onclick="SelectPlace(this)"
+        data-id="1002226"><span>ارمنستان</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1  text-sm" onclick="SelectPlace(this)"
+        data-id="1002244"><span>قطر</span></li>
+      <li class="cursor-pointer hover:text-primary text-textColor p-1  text-sm" onclick="SelectPlace(this)"
+        data-id="1002035"><span>روسیه</span></li>
+
     </ul>
   </div>
 </basis>
